@@ -9,13 +9,18 @@ I will improve the readme as it goes along.
 - Adding product categories possible
 - Adding products are possible
 - Sale implementation
+- Add and update car possible
+- jquery added
+- Cart summary added
 
 **What I am planning to add**
 
 - User deletion
 - Product recommendation
 - Payment method
-- Adding to cart
+- Delete from to cart
+- User profile
+- Wishlist
 
 **To have and launch for yourself.**
 
