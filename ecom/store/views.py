@@ -76,3 +76,5 @@ def category(request, item):
     except:
         messages.error(request, ("Whoops! That category does not exist. Please try again!"))
         return redirect('home')
+    
+    
