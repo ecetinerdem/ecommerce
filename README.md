@@ -1,4 +1,4 @@
-This is an e-commerce website which ı wish to create for myself.
+This is an e-commerce website which ı wish to create for my fiance.
 
 I will improve the readme as it goes along.
 
@@ -10,15 +10,16 @@ I will improve the readme as it goes along.
 - Adding products are possible
 - Sale implementation
 - Add and update car possible
-- jquery added
+- Jquery added
 - Cart summary added
+- Delete from cart added
+- Search function added
 
 **What I am planning to add**
 
 - User deletion
 - Product recommendation
 - Payment method
-- Delete from to cart
 - User profile
 - Wishlist
 
