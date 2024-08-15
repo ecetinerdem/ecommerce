@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm
 from django import forms
+from django.db.models import Q
 # Create your views here.
 
 def home(request):
@@ -97,6 +98,22 @@ def update_password(request):
 def product(request, pk):
     product = Product.objects.get(id=pk)
     return render(request, 'product.html', {'product': product})
+
+
+def search(request):
+    #Determine if they filled out the form
+    if request.method == "POST":
+        searched = request.POST['searched']
+        #Query the product at DB model
+        searched = Product.objects.filter(Q(name__icontains=searched) | Q(description__icontains=searched))
+        #Test for null
+        if not searched:
+            messages.error(request, ("Whoops! That product does not exist. Please try again!"))
+            return render(request, 'search.html', {})
+        else:    
+            return render(request, 'search.html', {'searched': searched})
+    else:
+        return render(request, 'search.html', {})
             
             
             
