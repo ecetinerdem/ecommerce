@@ -14,6 +14,9 @@ I will improve the readme as it goes along.
 - Cart summary added
 - Delete from cart added
 - Search function added
+- Shipping form added and automated
+- Checkout added
+- Payment app created
 
 **What I am planning to add**
 
