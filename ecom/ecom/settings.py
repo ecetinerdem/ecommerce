@@ -17,12 +17,14 @@ from dotenv import load_dotenv
 
 
 
-
-#Load our enviranmental variables
-load_dotenv()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load our environmental variables
+load_dotenv()
+
+DB_PASSWORD = os.environ['DB_PASSWORD']
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +37,7 @@ SECRET_KEY = 'django-insecure-fm9wj=&qkykam9q$l29i-s#k8yc**f)u%)#8m-)m)ylg8vxja)
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = []
 
 
 # Application definition
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     'store',
     'cart',
     'payment',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ecom.urls'
@@ -89,13 +94,16 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'NAME': 'raiway',
         'USER': 'postgres',
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'PASSWORD': DB_PASSWORD,  # Replace DB_PASSWORD with your actual password or environment variable
         'HOST': 'postgres.railway.internal',
         'PORT': '5432',
     }
 }
+
+
+
 
 
 
@@ -135,6 +143,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = ['static/']
+
+#White noise static
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
