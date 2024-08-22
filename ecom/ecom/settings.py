@@ -97,8 +97,8 @@ DATABASES = {
         'NAME': 'raiway',
         'USER': 'postgres',
         'PASSWORD': DB_PASSWORD,  # Replace DB_PASSWORD with your actual password or environment variable
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
+        'HOST': 'autorack.proxy.rlwy.net',
+        'PORT': '12267',
     }
 }
 
