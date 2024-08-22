@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'raiway',
+        'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': DB_PASSWORD,  # Replace DB_PASSWORD with your actual password or environment variable
         'HOST': 'autorack.proxy.rlwy.net',
