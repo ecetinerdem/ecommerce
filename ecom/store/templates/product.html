@@ -52,6 +52,20 @@
                 </select>
                 </div>
             </div>
+            <br/>
+            <!-- Dropdown for selecting size -->
+            <div class="row justify-content-center">
+                <div class="col-md-2">Size:</div>
+                <div class="col-md-2">
+                    <select class="form-select form-select-sm" id="size-cart">
+                        <option value="1">XS</option>
+                        <option value="2">S</option>
+                        <option value="3">M</option>
+                        <option value="4">L</option>
+                        <option value="5">XL</option>
+                    </select>
+                </div>
+            </div>
             <br/><br/>
         <a href="{% url 'home'%}" class="btn btn-secondary">Home</a>
         <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To Cart</button>
