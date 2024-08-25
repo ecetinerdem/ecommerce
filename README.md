@@ -1,5 +1,11 @@
 This is an e-commerce website which ı wish to create for my fiance.
 
+Here you can see the web-site it is fully online. Right now categories section needs to be implemented properly because it raises a bug! Other than this fully functional with registration, login, view, order. Payment implementation will be done.
+
+Please do go check!
+
+https://ecommerce-production-bd35.up.railway.app/
+
 I will improve the readme as it goes along.
 
 **Django is the corner stone and right now;**
